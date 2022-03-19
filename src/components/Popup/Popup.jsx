@@ -14,32 +14,23 @@ function Popup({ avatarList, closePopup }) {
     }
   };
   const getClassname = (i) => {
-     if (isAvatarSelected && avatarSelected === i) {
+    if (isAvatarSelected && avatarSelected === i) {
       return "Loading";
     } else {
       return "Default";
     }
   };
-  const handleEnterKeyPress =
-    (onClick) =>
-    ({ key }) => {
-      if (key === "Enter") {
-        onClick();
-      }
-    };
+
   const getAvatar = ({ src, label }, i) => (
     <li
       key={label}
       className={getClassname(i)}
       onClick={(e) => handleAvatarListItemClick(e, i)}
-      onKeyPress={handleEnterKeyPress((e) => handleAvatarListItemClick(e, i))}
-      tabIndex={0}
     >
       <img
         src={require(`../../assets/${src}`)}
         className="Avatars"
         alt={label}
-        
       />
     </li>
   );
