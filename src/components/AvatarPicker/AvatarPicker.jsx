@@ -35,7 +35,7 @@ function AvatarPicker() {
     <div className="main-container" ref={popup}>
       <Avatar handleClick={handleAvatarClick} currentAvatar={currentAvatar} />
       {isPickerOpen && (
-        <Popup avatarList={avatarList} closePopup={closeAvatarPicker} />
+      <Popup avatarList={avatarList} closePopup={closeAvatarPicker} />
       )}
     </div>
   );
