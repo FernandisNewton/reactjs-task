@@ -5,12 +5,9 @@ function Popup({ avatarList, closePopup }) {
   const [avatarSelected, setAvatarSelected] = useState(-1);
 
   const handleAvatarListItemClick = (e, i) => {
-   
-  
-      setAvatarSelected(i);
-      setIsAvatarSelected(true);
-      setTimeout(() => closePopup(i), 1000);
-    
+    setAvatarSelected(i);
+    setIsAvatarSelected(true);
+    setTimeout(() => closePopup(i), 1000);
   };
   const getClassname = (i) => {
     if (isAvatarSelected && avatarSelected === i) {
